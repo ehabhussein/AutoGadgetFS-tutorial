@@ -23,6 +23,7 @@
 	- [Summary of methods](#All-methods)
 	- [Help for a method](#Method-help)
 1. [How to install Autogadgetfs](https://agfs.io)
+1. [Slack channel](#Slack)
 1. [Buy me a coffee ☕️](#Donate)
 1. [Contact me](#Contact)
 
@@ -403,6 +404,14 @@ Starts a thread to monitor the USB target Device
 </details>
 
 - [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Slack"/>
+
+### Join Slack:
+
+Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_invite/zt-emgcv3ol-unG_axHmSQlk~5GcBddhlQ)
 
 ---
 
