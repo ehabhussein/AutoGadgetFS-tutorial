@@ -3,7 +3,7 @@
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
-1. [How to install Autogadgetfs](https://agfs.io/#Installation)
+1. [How to install Autogadgetfs](https://agfs.io/#Installation){:target="_blank"}
 1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Emulating the selected device](#Emulating-the-selected-device)
 1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
@@ -435,7 +435,7 @@ Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_
 
 ### Buy me a coffee to support the development of this project
 
-[![Paypal Donations](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/autogadgetfs)
+[![Paypal Donations](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/autogadgetfs){:target="_blank"}
 
 - [Go Back](#autogadgetfs-tutorial)
 
