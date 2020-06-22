@@ -13,8 +13,8 @@
 		1. [Random fuzzer](#Host-random-fuzzer)
 		1. [Smart Fuzzer](#Host-smart-fuzzer)
 		1. [Gadget fuzzer](#Host-gadget-fuzzer)
-  1. [Help](#Help)
-  	a. [Summary of methods](#All-methods)
+1. [Help](#Help)
+	a. [Summary of methods](#All-methods)
 	b. [help for a method](#Method-help)
 ---
 
