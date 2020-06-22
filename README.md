@@ -4,6 +4,7 @@
 1. [Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Emulating the selected device](#Emulating-the-selected-device)
 1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
+1. [Starting and stopping Man in the middle](#Mitm)
 1. [Fuzzing device and host](#Fuzzing)
 	- [Fuzzing the device](#Devfuzz)
 		1. [Random fuzzer](#Device-random-fuzzer)
