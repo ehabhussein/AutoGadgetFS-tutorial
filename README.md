@@ -424,7 +424,7 @@ Starts a thread to monitor the USB target Device
 
 ### Join Slack:
 
-Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_invite/zt-emgcv3ol-unG_axHmSQlk~5GcBddhlQ)
+Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_invite/zt-emgcv3ol-unG_axHmSQlk~5GcBddhlQ){:target="_blank"}
 
 
 - [Go Back](#autogadgetfs-tutorial)
@@ -447,6 +447,6 @@ Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_
 
 ### 📧: <rd@agfs.io>
 
-### 🐦 : <https://twitter.com/0xRaindrop>
+### 🐦 : [https://twitter.com/0xRaindrop](https://twitter.com/0xRaindrop){:target="_blank"}
 
 - [Go Back](#autogadgetfs-tutorial)
