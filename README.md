@@ -1,3 +1,5 @@
+<div style="text-align:left"><img src="https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/agfslogof.jpeg" /></div>
+
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
