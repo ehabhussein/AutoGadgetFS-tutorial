@@ -1,9 +1,11 @@
 <a name="autogadgetfs-tutorial"/>
 
+## Table of contents:
 1. [Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Emulating the selected device](#Emulating-the-selected-device)
 1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
 1. [Starting and stopping Man in the middle](#Mitm)
+1. [Starting and stopping the device sniffer](#devsniff)
 1. [Fuzzing device and host](#Fuzzing)
 	- [Fuzzing the device](#Devfuzz)
 		1. [Random fuzzer](#Device-random-fuzzer)
@@ -11,10 +13,12 @@
 		1. [Smart Fuzzer](#Device-smart-fuzz)
 		1. [Describe fuzzer](#Describe-fuzzer)
 		1. [Control Transfer Enumerator](#Control-Transfer-Enumerator)
+		1. [Send packet to device](#senddev)
 	- [Fuzzing the host](#Hostfuzz)
 		1. [Random fuzzer](#Host-random-fuzzer)
 		1. [Smart Fuzzer](#Host-smart-fuzzer)
 		1. [Gadget fuzzer](#Host-gadget-fuzzer)
+		1. [Send packet to host](#sendhst)
 1. [Help](#Help)
 	- [Summary of methods](#All-methods)
 	- [Help for a method](#Method-help)
