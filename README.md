@@ -3,6 +3,7 @@
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
+1. [What is AutoGadgetFS](https://agfs.io/){:target="_blank"}
 1. [How to install Autogadgetfs](https://agfs.io/#Installation){:target="_blank"}
 1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Create a new project](#newp)
