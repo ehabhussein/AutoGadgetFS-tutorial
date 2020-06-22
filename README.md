@@ -226,7 +226,6 @@ optional arguments:
 ```
 
 <details><summary>Show More...</summary>
-<p>
 	
 ```bash
 
@@ -234,7 +233,6 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ```
 
-</p>
 </details>
 
 - [Go Back](#autogadgetfs-tutorial)
