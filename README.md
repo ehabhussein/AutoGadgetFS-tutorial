@@ -3,7 +3,7 @@
   1. [Emulating the selected device](#Emulating-the-selected-device)
   1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
   1. [Fuzzing device and host](#Fuzzing)
-  		a. [Fuzzing the device](#Devfuzz)
+  	a. [Fuzzing the device](#Devfuzz)
 			1. [Random fuzzer](#Device-random-fuzzer)
 			1. [Sequential Fuzzer](#Device-sequential-fuzzer)
 			1. [Smart Fuzzer](#Device-smart-fuzz)
