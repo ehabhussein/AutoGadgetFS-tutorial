@@ -413,6 +413,9 @@ Starts a thread to monitor the USB target Device
 
 Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_invite/zt-emgcv3ol-unG_axHmSQlk~5GcBddhlQ)
 
+
+- [Go Back](#autogadgetfs-tutorial)
+
 ---
 
 <a name="Donate"/>
@@ -420,6 +423,8 @@ Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_
 ### Buy me a coffee to support the development of this project
 
 [![Paypal Donations](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/autogadgetfs)
+
+- [Go Back](#autogadgetfs-tutorial)
 
 ---
 
@@ -430,3 +435,5 @@ Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_
 ### 📧: <rd@agfs.io>
 
 ### 🐦 : <https://twitter.com/0xRaindrop>
+
+- [Go Back](#autogadgetfs-tutorial)
