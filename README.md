@@ -18,6 +18,7 @@
 1. [Help](#Help)
 	- [Summary of methods](#All-methods)
 	- [help for a method](#Method-help)
+
 ---
 
 ### Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
