@@ -14,8 +14,8 @@
 		1. [Smart Fuzzer](#Host-smart-fuzzer)
 		1. [Gadget fuzzer](#Host-gadget-fuzzer)
 1. [Help](#Help)
-	a. [Summary of methods](#All-methods)
-	b. [help for a method](#Method-help)
+	- [Summary of methods](#All-methods)
+	- [help for a method](#Method-help)
 ---
 
 ### Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
