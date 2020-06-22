@@ -23,6 +23,8 @@
 	- [Summary of methods](#All-methods)
 	- [Help for a method](#Method-help)
 1. [How to install Autogadgetfs](https://agfs.io)
+1. [Buy me a coffee ☕️](#Donate)
+1. [Contact me](#Contact)
 
 ---
 
@@ -403,3 +405,19 @@ Starts a thread to monitor the USB target Device
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
+
+<a name="Donate"/>
+
+### Buy me a coffee to support the development of this project
+
+[![Paypal Donations](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/autogadgetfs)
+
+---
+
+<a name="Contact"/>
+
+### Contact me:
+
+### 📧: <rd@agfs.io>
+
+### 🐦 : <https://twitter.com/0xRaindrop>
