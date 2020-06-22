@@ -345,9 +345,11 @@ ________________________________________________________________________________
 
 - [Go Back](#autogadgetfs-tutorial)
 
+
 ---
 
-### Method help
+
+### Help for a method
 
 ```python3
 
