@@ -22,6 +22,7 @@
 1. [Help](#Help)
 	- [Summary of methods](#All-methods)
 	- [Help for a method](#Method-help)
+1. [How to install Autogadgetfs](https://agfs.io)
 
 ---
 
