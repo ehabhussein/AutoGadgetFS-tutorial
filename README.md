@@ -32,7 +32,9 @@ Enter IP address of the rabbitmq server: 127.0.0.1
 
 In [3]: x.findSelect()
 ```
-<details><summary>Show More...</summary>
+<details>
+	<summary>Show More...</summary>
+	
 ```python
 Give your project a name?!: Nuc220DevKit
 0 : Realtek:33107:3034
