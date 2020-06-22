@@ -17,7 +17,7 @@
 		1. [Gadget fuzzer](#Host-gadget-fuzzer)
 1. [Help](#Help)
 	- [Summary of methods](#All-methods)
-	- [help for a method](#Method-help)
+	- [Help for a method](#Method-help)
 
 ---
 
