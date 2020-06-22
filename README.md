@@ -1,6 +1,7 @@
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
+1. [How to install Autogadgetfs](https://agfs.io/#Installation)
 1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Emulating the selected device](#Emulating-the-selected-device)
 1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
@@ -22,7 +23,7 @@
 1. [Help](#Help)
 	- [Summary of methods](#All-methods)
 	- [Help for a method](#Method-help)
-1. [How to install Autogadgetfs](https://agfs.io)
+1. [Supported by](#Support)
 1. [Slack channel](#Slack)
 1. [Buy me a coffee ☕️](#Donate)
 1. [Contact me](#Contact)
@@ -402,6 +403,16 @@ Starts a thread to monitor the USB target Device
 ```
 
 </details>
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Support"/>
+
+### Supported by:
+
+<img src="https://scontent.faly3-2.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/44079817_10157132509822841_8000883082938810368_n.jpg?_nc_cat=111&_nc_sid=dd9801&efg=eyJpIjoidCJ9&_nc_oc=AQmV77vp4H7E5CLwRCvKIPBIb9mRcD6LUSD48vYLH-cjd5wwxVvv5p-S8CwHBBYQr9I&_nc_ht=scontent.faly3-2.fna&_nc_tp=14&oh=d1653eaad921c8faf36beecbf242dcf8&oe=5F02FEF9" width="166" height="166"> ![JetBrains](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/JetBrains.png) ![PyUSB](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/pyusb.png)
 
 - [Go Back](#autogadgetfs-tutorial)
 
