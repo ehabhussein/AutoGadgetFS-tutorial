@@ -32,11 +32,8 @@ Enter IP address of the rabbitmq server: 127.0.0.1
 
 In [3]: x.findSelect()
 ```
-{::options parse_block_html="true" /}
 <details><summary>Show More...</summary>
-<p>
-	
-```python3
+```python
 Give your project a name?!: Nuc220DevKit
 0 : Realtek:33107:3034
 1 : Generic:1041:3034
@@ -176,13 +173,7 @@ Creating backup of device
 In [4]:
 
 ```
-
-</p>
-
 </details> 
-
-{::options parse_block_html="false" /}
-
 
 - [Go Back](#autogadgetfs-tutorial)
 
