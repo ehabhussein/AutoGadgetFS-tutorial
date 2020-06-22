@@ -213,6 +213,12 @@ Password:
 Connecting...
 Sending...
 Done!
+Do you want to run the gadget? [y/n]y
+********************************
+Gadget should now be running
+********************************
+
+In [5]:  
 
 ```
 
