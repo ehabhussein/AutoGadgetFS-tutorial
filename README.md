@@ -33,7 +33,6 @@ Enter IP address of the rabbitmq server: 127.0.0.1
 In [3]: x.findSelect()
 ```
 <details>
-	<summary>Show More...</summary>
 	
 ```python
 Give your project a name?!: Nuc220DevKit
@@ -222,7 +221,7 @@ optional arguments:
 
 ```
 
-<details><summary>Show More...</summary>
+<details>
 	
 ```bash
 
@@ -245,10 +244,10 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 In [63]: x.help("")
 
 ```
-<details><summary>Show More...</summary>
-<p>
 
-```python3
+<details>
+
+```python
 
 Currently supported methods:
 ________________________________________________________________________________
@@ -340,7 +339,6 @@ ________________________________________________________________________________
 
 ```
 
-</p>
 </details>
 
 - [Go Back](#autogadgetfs-tutorial)
@@ -356,10 +354,8 @@ In [65]: x.help("startMITMusbWifi",source=True)
 ```
 
 <details>
-	<summary>Show More...</summary>
-	<p>
 		
-```python3	
+```python
 
 ****
 [+]Help for startMITMusbWifi Method:
@@ -391,7 +387,7 @@ Starts a thread to monitor the USB target Device
 ****
 
 ```
-</p>
+
 </details>
 
 - [Go Back](#autogadgetfs-tutorial)
