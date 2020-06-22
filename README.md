@@ -19,7 +19,9 @@
 ---
 
 ### Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
+
 ```python
+
 In [1]: import libagfs                                                         
 
 In [2]: x = libagfs.agfs()                                                                                                                                                                    
@@ -171,7 +173,8 @@ Creating backup of device
 
 - Done: Device settings copied to file.
 
-In [4]:   
+In [4]:
+
 ```
 
 </p>
@@ -184,6 +187,7 @@ In [4]:
 ### Emulating the selected device
 
 ```python3
+
 In [4]: x.setupGadgetFS()                                                                                                                                                                     
 setting up: Nuvoton
 Aquiring info about the device for Gadetfs
@@ -201,6 +205,7 @@ Sending...
 Done!
 
 ```
+
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
@@ -208,6 +213,7 @@ Done!
 ### Starting the router on the Pi Zero
 
 ```bash
+
 root@pi:/home/pi# python3 router.py -h
 usage: router.py [-h] -ip IPADDRESS -l PKTLEN [-s HSTONLY]
 
@@ -216,12 +222,16 @@ optional arguments:
   -ip IPADDRESS  ip address of RabbitMQ
   -l PKTLEN      packet length. Check bMaxPacketsize0 on your device
   -s HSTONLY     Just to receive packets to the host
+
 ```
+
 <details><summary>Show More...</summary>
 <p>
 	
 ```bash
+
 root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
+
 ```
 
 </p>
@@ -234,13 +244,17 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 ### Help
 
 ### All methods
+
 ```python3
+
 In [63]: x.help("")
+
 ```
 <details><summary>Show More...</summary>
 <p>
 
 ```python3
+
 Currently supported methods:
 ________________________________________________________________________________
 Method               ||-->Description
@@ -339,6 +353,7 @@ ________________________________________________________________________________
 ---
 
 ### Method help
+
 ```python3
 
 In [65]: x.help("startMITMusbWifi",source=True)
@@ -349,7 +364,8 @@ In [65]: x.help("startMITMusbWifi",source=True)
 	<summary>Show More...</summary>
 	<p>
 		
-```python3		
+```python3	
+
 ****
 [+]Help for startMITMusbWifi Method:
 [-]Signature: startMITMusbWifi(self, endpoint=None, savefile=None, genpkts=0)
@@ -378,6 +394,7 @@ Starts a thread to monitor the USB target Device
         self.startMITMProxyThread.start()
 
 ****
+
 ```
 </p>
 </details>
