@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src="https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/agfslogos.png"/></div>
+<div style="text-align:left"><img src="https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/agfslogos.png"/></div>
 
 <a name="autogadgetfs-tutorial"/>
 
