@@ -434,7 +434,7 @@ Starts a thread to monitor the USB target Device
 
 ### Supported by:
 
-<img src="https://scontent.faly3-2.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/44079817_10157132509822841_8000883082938810368_n.jpg?_nc_cat=111&_nc_sid=dd9801&efg=eyJpIjoidCJ9&_nc_oc=AQmV77vp4H7E5CLwRCvKIPBIb9mRcD6LUSD48vYLH-cjd5wwxVvv5p-S8CwHBBYQr9I&_nc_ht=scontent.faly3-2.fna&_nc_tp=14&oh=d1653eaad921c8faf36beecbf242dcf8&oe=5F02FEF9" width="166" height="166"> ![JetBrains](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/JetBrains.png) ![PyUSB](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/pyusb.png) <img src="https://pbs.twimg.com/profile_images/1265989437214928896/ULboVjrX_400x400.jpg" width="166" height="166"> 
+<img src="https://scontent.faly3-2.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/44079817_10157132509822841_8000883082938810368_n.jpg?_nc_cat=111&_nc_sid=dd9801&efg=eyJpIjoidCJ9&_nc_oc=AQmV77vp4H7E5CLwRCvKIPBIb9mRcD6LUSD48vYLH-cjd5wwxVvv5p-S8CwHBBYQr9I&_nc_ht=scontent.faly3-2.fna&_nc_tp=14&oh=d1653eaad921c8faf36beecbf242dcf8&oe=5F02FEF9" width="166" height="166"> ![JetBrains](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/JetBrains.png) ![PyUSB](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/pyusb.png)
 
 - [Go Back](#autogadgetfs-tutorial)
 
