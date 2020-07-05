@@ -324,19 +324,19 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 * Stopping MITM Device side:
 	
 	```python
-	In [18]: x.stopMITMusbWifi()                                   
-**********************************
-Thread Terminated Successfully
-**********************************
-**************************************
-Sniffing has stopped successfully!
-**************************************
-Stream connection lost: IndexError('pop from an empty deque')
-***************************************
-MITM Proxy has now been terminated!
-***************************************
+		In [18]: x.stopMITMusbWifi()                                   
+	**********************************
+	Thread Terminated Successfully
+	**********************************
+	**************************************
+	Sniffing has stopped successfully!
+	**************************************
+	Stream connection lost: IndexError('pop from an empty deque')
+	***************************************
+	MITM Proxy has now been terminated!
+	***************************************
 
-In [19]: 
+	In [19]: 
 	```
 
 * Stopping MITM host side:
