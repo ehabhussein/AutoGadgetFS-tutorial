@@ -8,6 +8,7 @@
 1. [What is AutoGadgetFS](https://agfs.io/){:target="_blank"}
 1. [Learn about USB](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
 1. [How to install Autogadgetfs](https://agfs.io/#Installation){:target="_blank"}
+1. [AutoGadgetFS settings file](#agfssettings)
 1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
 1. [Create a new project](#newp)
 1. [Emulating the selected device](#Emulating-the-selected-device)
@@ -46,6 +47,26 @@
 1. [Slack channel](#Slack)
 1. [Buy me a coffee ☕️](#Donate)
 1. [Contact me](#Contact)
+
+---
+
+<a name="agfssettings"/>
+
+### AutoGadgetFS settings file
+
+* Basic settings needed for agfs to work found in the file `agfsSettings.json` set them accordingly to your setup:
+
+```json
+{
+	"RabbitMQ-IP":"127.0.0.1",
+	"PiZeroIP":"192.168.1.57",
+	"PiZeroSSHPort":22,
+	"PiZeroUser":"pi",
+	"PiZeroPass":"raspberry"
+}
+```
+
+- [Go Back](#autogadgetfs-tutorial)
 
 ---
 
