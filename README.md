@@ -189,7 +189,19 @@ This Device isnt in DFU mode
 
 ********************************
 
-Do you want to claim the device interface: [y/n] y
+Do you want to claim all device interfaces: [y/n] y
+[+] Claiming interface 0
+	[-]Successfully claimed interface 0
+[+] Claiming interface 1
+	[-]Successfully claimed interface 1
+[+] Claiming interface 2
+	[-]Successfully claimed interface 2
+Checking HID report retrieval
+Hid report [0]: 05010906a101050719e029e71500250175019508810295017508810195057501050819012905910295017503910195067508150025650507190029658100090375089508b102c0
+	decoded: .........à.ç....u.......u.....u...........u.....u....e.....e....u.....À
+Hid report [1]: 06d0f10901a1010920150026ff007508954081020921150026ff00750895409102c0
+	decoded: .Ðñ.........ÿ.u..........ÿ.u.....À
+
 Checking HID report retrieval
 
 b'05010900a101150026ff0019002900750895408102190029009102c0'
