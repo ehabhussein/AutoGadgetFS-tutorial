@@ -308,7 +308,7 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 In [12]: x.startMITMusbWifi(epin=0x81,epout=0x2)                              
 ```
 
-![devmitm1](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devmitm1.png)
+![devmitm1](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devmitm11.png)
     
 
 	* Starting MITM host side:
