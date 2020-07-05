@@ -217,17 +217,17 @@ In [4]:
 
 ### Create a new project
 
-    ```python
-    In [20]: x.newProject()                                                                                                                                                                       
-    [-] Releasing the Interface
-    Releasing interfaces :
-        1
-    [-] Attaching the kernel driver
-    Releasing interface: 0
-    Releasing interface: 1
-    [-] Device released!
-    Give your project a name?!: 
-    ```
+```python
+In [20]: x.newProject()                                                                                                                                                                       
+[-] Releasing the Interface
+Releasing interfaces :
+1
+[-] Attaching the kernel driver
+Releasing interface: 0
+Releasing interface: 1
+[-] Device released!
+Give your project a name?!: 
+```
     
 - [Go Back](#autogadgetfs-tutorial)
 
