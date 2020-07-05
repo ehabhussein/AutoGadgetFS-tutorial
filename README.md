@@ -181,10 +181,6 @@ Configuration Value: 1
 
 Do you want to reset the device? [y/n]: n
 which Configuration would you like to use: 1
-which Interface would you like to use: 0
-which Alternate setting would you like to use: 0
-which Endpoint IN would you like to use: 0x81
-which Endpoint OUT would you like to use: 0x2
 Checking if device supports DFU mode based on USB DFU R1.1
 
 ********************************
