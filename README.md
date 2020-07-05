@@ -5,6 +5,7 @@
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
+
 1. [What is AutoGadgetFS](https://agfs.io/){:target="_blank"}
 1. [Learn about USB](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
 1. [How to install Autogadgetfs](https://agfs.io/#Installation){:target="_blank"}
@@ -15,18 +16,18 @@
 1. [Starting and stopping Man in the middle](#Mitm)
 1. [Starting and stopping the device sniffer](#devsniff)
 1. [Fuzzing device and host](#Fuzzing)
-	- [Fuzzing the device](#Devfuzz)
-		1. [Random fuzzer](#Device-random-fuzzer)
-		1. [Sequential Fuzzer](#Device-sequential-fuzzer)
-		1. [Smart Fuzzer](#Device-smart-fuzz)
-		1. [Describe fuzzer](#Describe-fuzzer)
-		1. [Send packet to device](#senddev)
-	- [Fuzzing the host](#Hostfuzz)
-		1. [Random fuzzer](#Host-random-fuzzer)
-		1. [Smart Fuzzer](#Host-smart-fuzzer)
-		1. [Gadget fuzzer](#Host-gadget-fuzzer)
-		1. [Send packet to host](#sendhst)
-		1. [Fuzzing with code coverage](#codecov)
+   - [Fuzzing the device](#Devfuzz)
+     1. [Random fuzzer](#Device-random-fuzzer)
+     1. [Sequential Fuzzer](#Device-sequential-fuzzer)
+     1. [Smart Fuzzer](#Device-smart-fuzz)
+     1. [Describe fuzzer](#Describe-fuzzer)
+     1. [Send packet to device](#senddev)
+   - [Fuzzing the host](#Hostfuzz)
+     1. [Random fuzzer](#Host-random-fuzzer)
+     1. [Smart Fuzzer](#Host-smart-fuzzer)
+     1. [Gadget fuzzer](#Host-gadget-fuzzer)
+     1. [Send packet to host](#sendhst)
+     1. [Fuzzing with code coverage](#codecov)
 1. [Developing your custom fuzzer](#cusfuzz)
 1. [Device control transfer enumerator](#Control-Transfer-Enumerator)
 1. [Removing a running gadget on the Pi Zero](#rgadget)
@@ -40,8 +41,8 @@
 1. [Show device information](#devinfo)
 1. [AGFS directory structure](#struct)
 1. [Help](#Help)
-	- [Summary of methods](#All-methods)
-	- [Help for a method](#Method-help)
+   - [Summary of methods](#All-methods)
+   - [Help for a method](#Method-help)
 1. [Supported by](#Support)
 1. [Slack channel](#Slack)
 1. [Buy me a coffee ☕️](#Donate)
@@ -49,10 +50,11 @@
 
 ---
 
+<a name="selecting-your-device"/>
+
 ### Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
 
 ```python
-
 In [1]: import libagfs                                                         
 
 In [2]: x = libagfs.agfs()                                                                                                                                                                    
@@ -63,8 +65,10 @@ Enter IP address of the rabbitmq server: 127.0.0.1
 
 In [3]: x.findSelect()
 ```
+
 <details>
-	
+
+
 ```python
 Give your project a name?!: Nuc220DevKit
 0 : Realtek:33107:3034
@@ -165,17 +169,17 @@ Disabled interface: 0
 [-] Kernel driver detached
 Configuration Value: 1
 
-​	Interface number: 0,Alternate Setting: 0
+	Interface number: 0,Alternate Setting: 0
 
-​		Endpoint Address: 0x81
+		Endpoint Address: 0x81
 
-​		Endpoint Address: 0x2
+		Endpoint Address: 0x2
 
-​	Interface number: 1,Alternate Setting: 0
+	Interface number: 1,Alternate Setting: 0
 
-​		Endpoint Address: 0x83
+		Endpoint Address: 0x83
 
-​		Endpoint Address: 0x4
+		Endpoint Address: 0x4
 
 Do you want to reset the device? [y/n]: n
 which Configuration would you like to use: 1
@@ -205,16 +209,18 @@ Creating backup of device
 In [4]:
 
 ```
+
 </details> 
 
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
 
+<a name="Emulating-the-selected-device"/>
+
 ### Emulating the selected device
 
 ```python3
-
 In [4]: x.setupGadgetFS()                                                                                                                                                                     
 setting up: Nuvoton
 Aquiring info about the device for Gadetfs
@@ -243,10 +249,11 @@ In [5]:
 
 ---
 
+<a name="Starting-the-router-on-the-Pi-Zero"/>
+
 ### Starting the router on the Pi Zero
 
 ```bash
-
 root@pi:/home/pi# python3 router.py -h
 usage: router.py [-h] -ip IPADDRESS -l PKTLEN [-s HSTONLY]
 
@@ -259,9 +266,9 @@ optional arguments:
 ```
 
 <details>
-	
-```bash
 
+
+```bash
 root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ```
@@ -272,20 +279,93 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ---
 
+<a name="Mitm"/>
+
+### Starting and stopping Man in the middle
+
+
+	* Starting MITM Device side:
+	
+	```python
+	In [12]: x.startMITMusbWifi(endpoint=0x81)                                                                                                                                                    
+
+*************************************************************
+
+Sniffing the device started, messages sent to host queue!
+
+*************************************************************
+
+Connected to RabbitMQ, starting consumption!
+Connected to exchange, we can send to host!
+|-[From Host]->Write packet->[To Device][Pkt# 1]----------------------------------------------------------------------
+|	  Received:b'013effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+|	        Diff:--^^^^^^^^^^--------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|		  Decoded:..ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+|------------------------------------------------------------------------------------------[Pkt #1]
+|-[From Host]->Write packet->[To Device][Pkt# 2]----------------------------------------------------------------------
+|	  Received:b'023effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+|	        Diff:--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|		  Decoded:..ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+|------------------------------------------------------------------------------------------[Pkt #2]
+|-[From Host]->Write packet->[To Device][Pkt# 3]----------------------------------------------------------------------
+|	  Received:b'0314fb00000001ff00000001005000000000ffffffff3629cb5d000002079852d0918f123de1d581289bf7b8f2066dccca223ded7b1847d1abece3e10eb0eb2c'
+|	        Diff:--------------^^--------------------^^^^^^^^------------------------------------------------------------------------------------
+|		  Decoded:..û....ÿ.....P....ÿÿÿÿ6.Ë......RÐ....áÕ.....ò.mÌÊ..í..GÑ.ìãá..ë.
+|------------------------------------------------------------------------------------------[Pkt #3]
+	```
+
+#### Host side:
+
+	```bash
+	pi@agfs:~ $ sudo bash
+
+root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
+[+]Go go gadget MITM!
+	[-]Monitoring /dev/hidg0 started!
+[+]Initiating Connection to RabbitMQ
+	[-]Started!
+[+]Press Ctrl-C anytime to clean up and exit!
+[+]MITM session has now started!
+|-[From Device]->Write packet->[To Host][Pkt #1]--------------------------------------------------------------------------------
+|	  Bytes:
+|		Sent: b'0114fd1a00000920010068beb2999101840100b2000000001d98708602079852d0918f123de1d581289bf7b8f2066dccca223ded7b1847d1abece3e10eb0eb2c'
+|		Diff:   
+|	  Decoded:
+|		 Sent: ..ý.......h¾²......²......p....RÐ....áÕ.....ò.mÌÊ..í..GÑ.ìãá..ë.
+|__________________________________________________________________________________________[Pkt #1]
+|-[From Device]->Write packet->[To Host][Pkt #2]--------------------------------------------------------------------------------
+|	  Bytes:
+|		Sent: b'0214fd1a00000920010068beb2999c01790100b2000000001d98708602079852d0918f123de1d581289bf7b8f2066dccca223ded7b1847d1abece3e10eb0eb2c'
+|		Diff:   --^^^^^^^^^^^^^^^^^^^^^^^^^^--^^--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|	  Decoded:
+|		 Sent: ..ý.......h¾²...y..²......p....RÐ....áÕ.....ò.mÌÊ..í..GÑ.ìãá..ë.
+|__________________________________________________________________________________________[Pkt #2]
+|-[From Device]->Write packet->[To Host][Pkt #3]--------------------------------------------------------------------------------
+|	  Bytes:
+|		Sent: b'0308010000000100000068beb2999c01790100b2000000001d98708602079852d0918f123de1d581289bf7b8f2066dccca223ded7b1847d1abece3e10eb0eb2c'
+|		Diff:   --------^^^^------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|	  Decoded:
+|		 Sent: ..........h¾²...y..²......p....RÐ....áÕ.....ò.mÌÊ..í..GÑ.ìãá..ë.
+	```
+
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
 ### Help
 
 ### All methods
 
 ```python3
-
 In [63]: x.help("")
 
 ```
 
 <details>
 
-```python
 
+```python
 Currently supported methods:
 ________________________________________________________________________________
 Method               ||-->Description
@@ -380,22 +460,20 @@ ________________________________________________________________________________
 
 - [Go Back](#autogadgetfs-tutorial)
 
-
 ---
 
 
 ### Help for a method
 
 ```python3
-
 In [65]: x.help("startMITMusbWifi",source=True)
 
 ```
 
 <details>
-		
-```python
 
+
+```python
 ****
 [+]Help for startMITMusbWifi Method:
 [-]Signature: startMITMusbWifi(self, endpoint=None, savefile=None, genpkts=0)
