@@ -72,7 +72,7 @@
 
 <a name="selecting-your-device"/>
 
-### Selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
+### Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)
 
 ```python
 
