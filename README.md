@@ -302,7 +302,7 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ### Starting and stopping Man in the middle
 
-	* Starting MITM Device side: ( You can select any EndpointIN on the active configuration)
+* Starting MITM Device side: ( You can select any EndpointIN on the active configuration)
 
 ```python
 In [12]: x.startMITMusbWifi(epin=0x81,epout=0x2)                              
@@ -311,7 +311,7 @@ In [12]: x.startMITMusbWifi(epin=0x81,epout=0x2)
 ![devmitm1](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devmitm11.png)
     
 
-	* Starting MITM host side:
+* Starting MITM host side:
 
 ```bash
 pi@agfs:~ $ sudo bash
@@ -320,7 +320,8 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ![devmitm2](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devmitm2H.png)
 
-	* Stopping MITM Device side:
+
+* Stopping MITM Device side:
 	
 	```python
 	In [18]: x.stopMITMusbWifi()                                   
@@ -338,7 +339,7 @@ MITM Proxy has now been terminated!
 In [19]: 
 	```
 
-	* Stopping MITM host side:
+* Stopping MITM host side:
 	
 	```bash
 	Keep pressing Ctrl-C anytime to clean up and exit!
