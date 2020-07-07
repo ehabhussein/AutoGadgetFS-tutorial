@@ -389,7 +389,7 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
   a. Random fuzzer:
   ```python3
-  libagfs.devrandfuzz(epin=0x81,epout=0x2)
+  In [22:] libagfs.devrandfuzz(epin=0x81,epout=0x2)
   ```
 ![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devrandfuzz.png)
 
