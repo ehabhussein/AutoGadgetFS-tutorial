@@ -401,8 +401,8 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 ![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/describefuzz.png)
 
 - [Go Back](#autogadgetfs-tutorial)
----
 
+---
 
 ### Help
 
