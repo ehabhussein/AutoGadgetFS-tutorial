@@ -250,7 +250,13 @@ In [4]:
 In [20]: libagfs.newProject()                                                                                                                                                                       
 [-] Releasing the Interface
 Releasing interfaces :
-1
+1<a name="Describe-fuzzer"/>
+
+  a. Describe fuzzer
+  `libagfs.describeFuzz(epin=0x81,epout=0x2,packet="f3e01ec4b13e710d5a259d295ce245628d876a16fe0083c43a9b3455ec27be375a64426dab7507d669ce4e076a178b1853847843d2318215425669336d0cf13d",howmany=10)` 
+
+
+- [Go Back](#autogadgetfs-tutorial)
 [-] Attaching the kernel driver
 Releasing interface: 0
 Releasing interface: 1
@@ -393,6 +399,16 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
+
+<a name="Describe-fuzzer"/>
+
+  a. Describe fuzzer
+  `libagfs.describeFuzz(epin=0x81,epout=0x2,packet="f3e01ec4b13e710d5a259d295ce245628d876a16fe0083c43a9b3455ec27be375a64426dab7507d669ce4e076a178b1853847843d2318215425669336d0cf13d",howmany=10)` 
+![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/describefuzz.png)
+
+- [Go Back](#autogadgetfs-tutorial)
+---
+
 
 ### Help
 
