@@ -162,7 +162,7 @@ DEVICE ID 0416:511c on Bus 001 Address 047 =================
      bAlternateSetting  :    0x0
      bNumEndpoints      :    0x2
      bInterfaceClass    :    0xa CDC Data
-     bInterfaceSubClass :    0x0
+     bInterfaceSubClass :    0x01
      bInterfaceProtocol :    0x0
      iInterface         :    0x0 
       ENDPOINT 0x83: Bulk IN ===============================
