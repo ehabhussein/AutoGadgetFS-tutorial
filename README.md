@@ -84,7 +84,7 @@ AutoGadgetFS: USB testing made easy
 ***************************************
 Enter IP address of the rabbitmq server: 127.0.0.1
 
-In [3]: x.findSelect()
+In [3]: libagfs.findSelect()
 ```
 <details>
 
@@ -247,7 +247,7 @@ In [4]:
 ### Create a new project
 
 ```python
-In [20]: x.newProject()                                                                                                                                                                       
+In [20]: libagfs.newProject()                                                                                                                                                                       
 [-] Releasing the Interface
 Releasing interfaces :
 1
@@ -268,7 +268,7 @@ Give your project a name?!:
 
 ```python3
 
-In [4]: x.setupGadgetFS()                                                                                                                                                                     
+In [4]: libagfs.setupGadgetFS()                                                                                                                                                                     
 setting up: Nuvoton
 Aquiring info about the device for Gadetfs
 
@@ -334,7 +334,7 @@ root@pi:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 * Starting MITM Device side: ( You can select any EndpointIN on the active configuration)
 
 ```python
-In [12]: x.startMITMusbWifi(epin=0x81,epout=0x2)                              
+In [12]: libagfs.startMITMusbWifi(epin=0x81,epout=0x2)                              
 ```
 
 ![devmitm1](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/devmitm11.png)
@@ -353,7 +353,7 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 * Stopping MITM Device side:
 	
 	```python
-		In [18]: x.stopMITMusbWifi()                                   
+		In [18]: libagfs.stopMITMusbWifi()                                   
 	**********************************
 	Thread Terminated Successfully
 	**********************************
@@ -378,13 +378,29 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ---
 
+<a name="Fuzzing"/>
+
+### Fuzzing device and host
+
+<a name="Devfuzz"/>
+
+#### Fuzzing the device
+<a name="Device-random-fuzzer"/>
+
+  a. Random fuzzer: `libagfs.devrandfuzz(epin=0x81,epout=0x2)`
+![](agfstutscreens/devrandfuzz.png)
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
 ### Help
 
 ### All methods
 
 ```python3
 
-In [63]: x.help("")
+In [63]: libagfs.help("")
 
 ```
 
@@ -493,7 +509,7 @@ ________________________________________________________________________________
 
 ```python3
 
-In [65]: x.help("startMITMusbWifi",source=True)
+In [65]: libagfs.help("startMITMusbWifi",source=True)
 
 ```
 
