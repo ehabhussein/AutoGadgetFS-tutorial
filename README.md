@@ -387,7 +387,7 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 #### Fuzzing the device
 <a name="Device-random-fuzzer"/>
 
-  a. Random fuzzer:
+  . Random fuzzer:
   ```python3
   In [22:] libagfs.devrandfuzz(epin=0x81,epout=0x2)
   ```
@@ -395,11 +395,9 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 - [Go Back](#autogadgetfs-tutorial)
 
----
-
 <a name="Describe-fuzzer"/>
 
-  a. Describe fuzzer
+  . Describe fuzzer
   
   ```python3
   In [19:] libagfs.describeFuzz(epin=0x81,epout=0x2,packet="f3e01ec..SNIP..259d293d",howmany=10)
