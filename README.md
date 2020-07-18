@@ -84,7 +84,7 @@ AutoGadgetFS: USB testing made easy
 ***************************************
 Enter IP address of the rabbitmq server: 127.0.0.1
 
-In [3]: libagfs.findSelect()
+In [3]: libagfs.newProject()
 ```
 <details>
 
