@@ -78,7 +78,7 @@
 
 In [1]: import libagfs                                                         
 
-In [2]: x = libagfs.agfs()                                                                                                                                                                    
+In [2]: libagfs = libagfs.agfs()                                                                                                                                                                    
 ***************************************
 AutoGadgetFS: USB testing made easy
 ***************************************
