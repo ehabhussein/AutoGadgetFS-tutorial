@@ -47,6 +47,7 @@
 1. [Slack channel](#Slack)
 1. [Buy me a coffee ☕️](#Donate)
 1. [Contact me](#Contact)
+15. [Want to contribute ?](#Cont)
 
 ---
 
@@ -608,5 +609,15 @@ Visit [AutogadgetFS Slack Channel](https://join.slack.com/t/autogadgetfs/shared_
 ### 📧: <rd@agfs.io>
 
 ### 🐦 : [https://twitter.com/0xRaindrop](https://twitter.com/0xRaindrop){:target="_blank"}
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Cont"/>
+
+### Contribute:
+
+We're looking for developers to make this tool great! send me an 📧: <rd@agfs.io> if you feel you'd like to be a part of this.
 
 - [Go Back](#autogadgetfs-tutorial)
