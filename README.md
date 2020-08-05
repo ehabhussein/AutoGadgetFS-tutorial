@@ -463,7 +463,7 @@ In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0)
 
 ```python3
 
-In [41]: x.help("SmartFuzz")                                                                                                                                                                  
+In [41]: agfs.help("SmartFuzz")                                                                                                                                                                  
 ****
 [+]Help for SmartFuzz Method:
 [-]Signature: SmartFuzz(self, engine=None, samples=10, direction=None, filename=None)
@@ -487,7 +487,7 @@ In [42]: !head -n5 binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bi
 07080100000001000000160000000100000088000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
 0114fd1a000009200100100000009e01820100b20000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
 
-In [43]: x.SmartFuzz(engine="random",samples=100,filename='binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bin',direction='hst')
+In [43]: agfs.SmartFuzz(engine="random",samples=100,filename='binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bin',direction='hst')
 ```
 
 <details>
@@ -535,7 +535,7 @@ generated:99 Packets
 Ended Successfully!
 ***********************
 
-In [44]: x.edap.packets                                                                                                                                          
+In [44]: agfs.edap.packets                                                                                                                                          
 ```
 
 <details>
