@@ -9,7 +9,7 @@
 1. [Learn about USB ✔️](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
 1. [How to install Autogadgetfs ✔️](https://agfs.io/#Installation){:target="_blank"}
 1. [AutoGadgetFS settings file ✔️](#agfssettings)
-1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints) ✔️](#selecting-your-device)
+1. [Importing agfs and selecting your device(Configuration, Interface, Alternate Settings, Endpoints)✔️](#selecting-your-device)
 1. [Create a new project ✔️](#newp)
 1. [Emulating the selected device ✔️](#Emulating-the-selected-device)
 1. [Starting the router on the Pi Zero ✔️](#Starting-the-router-on-the-Pi-Zero)
