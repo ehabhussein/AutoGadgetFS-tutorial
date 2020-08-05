@@ -23,7 +23,7 @@
 		1. [Describe fuzzer ✔️](#Describe-fuzzer)
 		1. [Send packet to device ❌](#senddev)
 	- [Fuzzing the host ✔️](#Hostfuzz)
-		1. [Random fuzzer ❌](#Host-random-fuzzer)
+		1. [Random fuzzer ✔️](#Host-random-fuzzer)
 		1. [Smart Fuzzer ❌](#Host-smart-fuzzer)
 		1. [Gadget fuzzer ✔️](#Host-gadget-fuzzer)
 		1. [Send packet to host ❌](#sendhst)
@@ -423,6 +423,37 @@ In [6]: agfs.removeGadget()
 <a name="Hostfuzz"/>
 
 ### Fuzzing the host
+
+<a name="Host-random-fuzzer"/>
+
+### Host random fuzzer
+
+```python3
+
+In [12]: agfs.help("hstrandfuzz")                                                                                                                                                                
+****
+[+]Help for hstrandfuzz Method:
+[-]Signature: hstrandfuzz(self, howmany=None, size=None, min=None, max=None, timeout=0.5, mybyte=None)
+
+
+[+]hstrandfuzz Help:
+this method allows you to create fixed or random size packets created using urandom and send them to the host queue
+:param howmany: how many packets to be sent to the device`
+:param size: fixed size packet lengthsize = 10 to generate a length 10 packet
+:param min minimum size value to generate a packet
+:param max maximum size value to generate a packet
+:param timeout: timeOUT !
+:param mybyte: if you want to fuzz with a specific byte 'AA'
+:return: None
+****
+
+In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0) 
+
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
 
 <a name="Host-gadget-fuzzer"/>
 
