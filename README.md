@@ -24,7 +24,7 @@
 		1. [Send packet to device ❌](#senddev)
 	- [Fuzzing the host ✔️](#Hostfuzz)
 		1. [Random fuzzer ✔️](#Host-random-fuzzer)
-		1. [Smart Fuzzer ❌](#Host-smart-fuzzer)
+		1. [Smart Fuzzer ✔️](#Host-smart-fuzzer)
 		1. [Gadget fuzzer ✔️](#Host-gadget-fuzzer)
 		1. [Send packet to host ❌](#sendhst)
 		1. [Fuzzing with code coverage ❌](#codecov)
@@ -448,6 +448,120 @@ this method allows you to create fixed or random size packets created using uran
 ****
 
 In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0) 
+
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Host-smart-fuzzer"/>
+
+### Host Smart Fuzzer
+
+* After you have done a MITM between the device and the host the communication has been saved in the `binariesdb/` folder you can use either the host or device communication to generate packets.
+
+```python3
+
+In [41]: x.help("SmartFuzz")                                                                                                                                                                  
+****
+[+]Help for SmartFuzz Method:
+[-]Signature: SmartFuzz(self, engine=None, samples=10, direction=None, filename=None)
+
+
+[+]SmartFuzz Help:
+This method is generates packets based on what it has learned from a sniff from either the host or the device
+:param engine: choice between smart, random
+    random: [truly random based on charset , length , chars found]
+    smart: [based on input , weight & positions]
+:param samples: number of samples to be generated
+:param direction: 'hst' or 'dev'
+:param filename: 'filename to learn from'
+:return: None
+****
+
+In [42]: !head -n5 binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bin                                                                                                             
+0308010000000100000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
+04185900000001000000160000000100000088000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
+06185900000001000000160000000100000088000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
+07080100000001000000160000000100000088000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
+0114fd1a000009200100100000009e01820100b20000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
+
+In [43]: x.SmartFuzz(engine="random",samples=100,filename='binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bin',direction='hst')
+
+<details>
+
+[+]General Statistics
+Full charset                : !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+Discarded charset           : !"#$%&'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ghijklmnopqrstuvwxyz{|}~
+Final charset               : 0123456789abcdef
+Word Length                 : 128
+Lower Case index usage      : 92%
+Lower Case index locations  : [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 122, 124, 125, 127]
+Upper Case index usage      : 0%
+Upper Case index locations  : []
+Digit index usage           : 96%
+Digit index locations       : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 126]
+NonAN index usage           : 0%
+NonAN index locations       : []
+Counter statistics          : Uppercase: 0 , Lowercase: 217240, Digits:385384 , NonAlphaNumeric:0
+All char Frequencies        : 
+character:3 found:22297 times
+character:8 found:27540 times
+character:0 found:174030 times
+character:2 found:40654 times
+character:5 found:9022 times
+character:4 found:23961 times
+character:1 found:32497 times
+character:7 found:17345 times
+character:b found:19418 times
+character:9 found:14464 times
+character:d found:12904 times
+character:f found:140847 times
+character:a found:15099 times
+character:e found:12454 times
+character:c found:16518 times
+character:6 found:23574 times
+
+</details>
+
+************************
+generated:99 Packets
+************************
+***********************
+Ended Successfully!
+***********************
+
+In [44]: x.edap.packets                                                                                                                                                                       
+
+<details>
+
+Out[44]: 
+['3a3cd3f2100661b9bff40f436464db4b1a9d003c10a357481a998149f12a9174e2701e81dabd8c4c3a01ab84e8d6d579b508562cf267e7cf5730000006b0ab2c',
+ '42081d4fea4927c06d4144dd5c07ce239e59e01de3d323fcdd0b4f41679d51bd954707a2b0b1b75cec9b66f8dfbd9d719fc00fc9c595347efc62000006b0ab2c',
+ '4a301f2c24cb8c2e08d53454490d75f7a2be5332dae4402167dd45877735c974b6f157c701e7dc01012a68df585af7c6100f02f87ffa3267558e000006b0ab2c',
+ '342071341a76d245c3649a5c1eedb03f9b958d2400a5173f5bd0280ba5570ac22905958d4f6b26a343b0df13efed425130e05693a2e217a1f3e2000006b0ab2c',
+ '7f08d53245e3c79ddb2b1adc505f7bfa8560d200cd59b6ff2db2f9b9349d46b927392c3b0adbc88b273c51f07f2c3e3018e21c497b8f80440100000006b0ab2c',
+ '74085d7ac549c79b74f85376ddea9cad8380babe40225ea8710832287ac76757269fe9ccd89ef36c5170170619fd5c0039d2dd49894a31e46c30000006b0ab2c',
+ '6f28041b3f3efaca767cea1356cc09388422df4c5fabc3fee7242b757881abba227197c90d5854bbb0dec25b0309b0facfc7c599a8b81828b51a000006b0ab2c',
+ '6130cb70ecb6256062653ebf4c7aa8f6d8e72c610d1edb0926c0cda7486835751492e49fa4ea25034736bb1a746364f3ce863efba9a4e8d6d9fc000006b0ab2c',
+ '3704b4098b5b6853a2d4d55bc72a52882fc843bbd2558520aefad080dd84f3713825ac1545b9b3279a2c1dc1edccf676ed8570b7ae8fb6cc38bd000006b0ab2c',
+ '67086e55d6233cf87058004a670f6439cfbf0438950b061db10ce6ac4673685a3ac1a5b9d7ef5451ba48241605ac6db6da6a37f46570d9d9c583000006b0ab2c',
+ '5d18c49cc6fa3fdfc1905301883c04c8ea6c770d1029c380529510d89e2406d21b567dd774d37ca0b72c8dfa4716043629b5d3ba6156c27bfacf000006b0ab2c',
+ '1c1c36c5d2612a33bb2c7b4b094cbb4ee75067d61859c97d6fefc3570f6d5c255c7586b6360d39672f5b33489d07d4428905a164d118928da0b5000006b0ab2c',
+ '320c2faf3ec660261295ada57f1495cd57f9d887957191344f100977fa2f720c455b88784976aff61c629f09c110748eee70ec51cb486da3f924000006b0ab2c',
+ '6200fb148e557cef808569361735a1cd8e6387baa76f9d4e7abb139d5eac51536e9e1587ad183ab1e28c9f519d55682b84be9bfe38f5c461cdcb000006b0ab2c',
+ '7c18d5a65db1ca1854b21f90810fbf54c869a1a584bc9d945a98bdca8a7cf2267505a5cdb9cef57a01fb4138a6852628f8cd376dfec4f308f5d5000006b0ab2c',
+ '6108e28ee56e02c782fcafef6a0f4fb8295e93b7c2e67a088dfab4901fd886a7aec23b6259899aa74ad509a0cf3a5b483187d8cada6b5ef4744c000006b0ab2c',
+ '4f1cae583604188f1b99e18980f40e797f1ad6651dbd5b93e347f4d38faa3bfd5947cc67edd30e32468d45bb692d83a99bc2934609fbba3dfad9000006b0ab2c',
+ '0c3ccc2b2d8322c8d0b8a3c9268aced86c5294d83a541e0acadf786302f763b42e91f904b473dcd6ea34d5d2fee0f170ddea3a7851bb453b2273000006b0ab2c',
+ '452c266b280d63ce77cae2db122e2fabc7440f470544ea15f031d080eeada3834180bc517332f518814eeb0d0a0a79aecd33763528b54b92b5bc000006b0ab2c',
+ '2334243bfb1c8cda6045167c6f50e91e74071eb60fad57e23724860f8b2273ff1e9abb7d5fada1ba8820a149cab49117cb116454a1ffe1c961c8000006b0ab2c',
+ '3f38ee382c80049f609c0d1ee4f29e2653460b4b375868b806b2b8cc770ac9121bef73ca983c56c9791b6869ed989f44d626f810e3eb2ea6816b000006b0ab2c',
+ '261c3762b3fd0ffd244179a4a58acc39186fa10c175ae1f49881b05c58dc25ad04520f669ecd4b1d56d496922f7239a23d99641c1c9dacbc2841000006b0ab2c',
+
+
+</details>
 
 ```
 
