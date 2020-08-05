@@ -301,6 +301,8 @@ In [5]:
 
 ### Starting the router on the Pi Zero
 
+* Once you have called agfs.setupGadgetFS() and the gadget is running . Now you can start the router on the raspberry pi side.
+
 ```bash
 
 root@pi:/home/pi# python3 router.py -h
