@@ -422,7 +422,7 @@ In [6]: agfs.removeGadget()
 
 <a name="Hostfuzz"/>
 
-###Fuzzing the host
+### Fuzzing the host
 
 <a name="Host-gadget-fuzzer"/>
 
