@@ -417,6 +417,18 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 ### Device control transfer enumerator
 
 ```python3
+In [3]: agfs.help("devEnumCtrltrnsf")                                                                                                                                                            
+****
+[+]Help for devEnumCtrltrnsf Method:
+[-]Signature: devEnumCtrltrnsf(self, fuzz='fast')
+
+
+[+]devEnumCtrltrnsf Help:
+This method enumerates all possible combinations of a control transfer request
+:param fuzz: "fast" fuzzer (bmRequest is fuzzed against 0x81 and 0xc0 and the other parameters are limited to one byte
+             "full" fuzzing (bmRequest is range(0xff) , wValue is range(0xffff) , wIndex is range(0xffff) . USE WITH CARE !!
+:return: None
+
 In [4]: agfs.devEnumCtrltrnsf()
 
 **************************************************
