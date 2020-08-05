@@ -418,7 +418,7 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ```python3
 In [4]: agfs.devEnumCtrltrnsf()
-In [4]: x.devEnumCtrltrnsf()                                                                                                                                                                  
+
 **************************************************
 Control Transfer requests enumeration started!
 **************************************************
