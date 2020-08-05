@@ -5,48 +5,44 @@
 <a name="autogadgetfs-tutorial"/>
 
 ## Table of contents: (Under development)
-1. [What is AutoGadgetFS](https://agfs.io/){:target="_blank"}
-1. [Learn about USB](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
-1. [How to install Autogadgetfs](https://agfs.io/#Installation){:target="_blank"}
-1. [AutoGadgetFS settings file](#agfssettings)
-1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints)](#selecting-your-device)
-1. [Create a new project](#newp)
-1. [Emulating the selected device](#Emulating-the-selected-device)
-1. [Starting the router on the Pi Zero](#Starting-the-router-on-the-Pi-Zero)
-1. [Starting and stopping Man in the middle](#Mitm)
-1. [Starting and stopping the device sniffer](#devsniff)
+1. [What is AutoGadgetFS ✔️](https://agfs.io/){:target="_blank"}
+1. [Learn about USB ✔️](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
+1. [How to install Autogadgetfs ✔️](https://agfs.io/#Installation){:target="_blank"}
+1. [AutoGadgetFS settings file ✔️](#agfssettings)
+1. [Importing agfs and selecting your device (Configuration, Interface, Alternate Settings, Endpoints) ✔️](#selecting-your-device)
+1. [Create a new project ✔️](#newp)
+1. [Emulating the selected device ✔️](#Emulating-the-selected-device)
+1. [Starting the router on the Pi Zero ✔️](#Starting-the-router-on-the-Pi-Zero)
+1. [Starting and stopping Man in the middle ✔️](#Mitm)
+1. [Removing a running gadget on the Pi Zero ✔️](#rgadget)
+1. [Starting and stopping the device sniffer ❌](#devsniff)
 1. [Fuzzing device and host](#Fuzzing)
 	- [Fuzzing the device](#Devfuzz)
-		1. [Random fuzzer](#Device-random-fuzzer)
-		1. [Smart Fuzzer](#Device-smart-fuzz)
-		1. [Describe fuzzer](#Describe-fuzzer)
-		1. [Send packet to device](#senddev)
+		1. [Random fuzzer ✔️](#Device-random-fuzzer)
+		1. [Smart Fuzzer ❌](#Device-smart-fuzz)
+		1. [Describe fuzzer ✔️](#Describe-fuzzer)
+		1. [Send packet to device ❌](#senddev)
 	- [Fuzzing the host](#Hostfuzz)
-		1. [Random fuzzer](#Host-random-fuzzer)
-		1. [Smart Fuzzer](#Host-smart-fuzzer)
-		1. [Gadget fuzzer](#Host-gadget-fuzzer)
-		1. [Send packet to host](#sendhst)
-		1. [Fuzzing with code coverage](#codecov)
-1. [Developing your custom fuzzer](#cusfuzz)
-1. [Device control transfer enumerator](#Control-Transfer-Enumerator)
-1. [Removing a running gadget on the Pi Zero](#rgadget)
-1. [Monitor device interfaces for changes](#monint)
-1. [Change to another Configuration, Interface, Alternate Settings, Endpoints on the device](#chgint)
-1. [Pull firmware from device that is in DFU...mode on Not Implemented](#dfu)
-1. [Clearing rabbitMQ Queues](#qclear)
-1. [Releasing the device back to the system](#release)
-1. [Parse, search , show and replay usblyzer capture](#usblyzer)
-1. [Reset the device](#reset)
+		1. [Random fuzzer ❌](#Host-random-fuzzer)
+		1. [Smart Fuzzer ❌](#Host-smart-fuzzer)
+		1. [Gadget fuzzer ❌](#Host-gadget-fuzzer)
+		1. [Send packet to host ❌](#sendhst)
+		1. [Fuzzing with code coverage ❌](#codecov)
+1. [Device control transfer enumerator ✔️](#Control-Transfer-Enumerator)
+1. [Monitor device interfaces for changes ✔️](#monint)
+1. [Clearing rabbitMQ Queues✔️](#qclear)
+1. [Releasing the device back to the system✔️](#release)
+1. [Parse, search , show and replay usblyzer capture ❌](#usblyzer)
+1. [Reset the device ✔️](#reset)
 1. [Show device information](#devinfo)
-1. [AGFS directory structure](#struct)
-1. [Help](#Help)
-	- [Summary of methods](#All-methods)
-	- [Help for a method](#Method-help)
-1. [Supported by](#Support)
-1. [Slack channel](#Slack)
-1. [Buy me a coffee ☕️](#Donate)
-1. [Contact me](#Contact)
-15. [Want to contribute ?](#Cont)
+1. [Help ✔️](#Help)
+	- [Summary of methods ✔️](#All-methods)
+	- [Help for a method ✔️](#Method-help)
+1. [Supported by ✔️](#Support)
+1. [Slack channel ✔️](#Slack)
+1. [Buy me a coffee ☕️ ✔️](#Donate)
+1. [Contact me ✔️](#Contact)
+15. [Want to contribute ? ✔️](#Cont)
 
 ---
 
@@ -382,6 +378,18 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ---
 
+<a name="rgadget"/>
+
+### Removing a running gadget on the Pi Zero
+
+```python3
+In [6]: agfs.removeGadget()  
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
 <a name="Fuzzing"/>
 
 ### Fuzzing device and host
@@ -460,6 +468,93 @@ Now at bmRequest[0xa1]
 |__________________________________________________________________________________________[*]
 ...SNIP
 ```
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="monit"/>
+
+### Monitor device interfaces for changes
+
+```python3
+In [6]: agfs.help("startMonInterfaceChng")                                                                                                                                                       
+****
+[+]Help for startMonInterfaceChng Method:
+[-]Signature: startMonInterfaceChng(self)
+
+
+[+]startMonInterfaceChng Help:
+This method Allows you to monitor a device every 10 seconds in case it suddenly changes its interface configuration.
+Like when switching and Android phone from MTP to PTP . you'll get a notification so you can check
+your interfaces and adapt to that change using changeintf() method
+****
+
+In [7]: agfs.startMonInterfaceChng() 
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="qclear"/>
+
+### Clearing rabbitMQ Queues
+
+```python3
+In [7]: agfs.help("clearqueues")                                                                                                                                                                 
+****
+[+]Help for clearqueues Method:
+[-]Signature: clearqueues(self)
+
+
+[+]clearqueues Help:
+this method clears all the queues on the rabbitMQ queues that are set up
+****
+
+In [8]: agfs.clearqueues() 
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="release"/>
+
+### Releasing the device back to the system
+
+```python3
+In [8]: agfs.help("releasedev")                                                                                                                                                                  
+****
+[+]Help for releasedev Method:
+[-]Signature: releasedev(self)
+
+
+[+]releasedev Help:
+releases the device and re-attaches the kernel driver
+****
+
+In [9]: agfs.releasedev()                                                                                                                                                                        
+Releasing interfaces :
+	2
+[-] Attaching the kernel driver
+Releasing interface: 2
+[-] Device released!
+
+```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="reset"/>
+
+### Reset the device
+
+```python3
+In [9]: agfs.device.reset()
+
+```
+
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
