@@ -8,7 +8,7 @@
 1. [What is AutoGadgetFS ✔️](https://agfs.io/){:target="_blank"}
 1. [Learn about USB ✔️](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
 1. [How to install Autogadgetfs ✔️](https://agfs.io/#Installation){:target="_blank"}
-1. [AutoGadgetFS settings file ✔️](#agfssettings)
+1. [AutoGadgetFS settings file ✔️](#agfssettings)https://github.com/aktsk/apk-medit
 1. [Importing agfs and selecting your device(Configuration, Interface, Alternate Settings, Endpoints)✔️](#selecting-your-device)
 1. [Create a new project ✔️](#newp)
 1. [Emulating the selected device ✔️](#Emulating-the-selected-device)
@@ -459,7 +459,7 @@ In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0)
 
 ### Host Smart Fuzzer
 
-* After you have done a MITM between the device and the host the communication has been saved in the `binariesdb/` folder you can use either the host or device communication to generate packets.
+* After you have done a MITM between the device and the host, the communication has been saved in the `binariesdb/` folder you can use either the host or device communication to generate packets.
 
 ```python3
 
