@@ -492,6 +492,7 @@ In [43]: x.SmartFuzz(engine="random",samples=100,filename='binariesdb/dfg-Nuvoto
 
 <details>
 
+```python3
 [+]General Statistics
 Full charset                : !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 Discarded charset           : !"#$%&'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ghijklmnopqrstuvwxyz{|}~
@@ -523,7 +524,7 @@ character:a found:15099 times
 character:e found:12454 times
 character:c found:16518 times
 character:6 found:23574 times
-
+```
 </details>
 
 ```python3
@@ -538,7 +539,7 @@ In [44]: x.edap.packets
 ```
 
 <details>
-
+```python3
 Out[44]: 
 ['3a3cd3f2100661b9bff40f436464db4b1a9d003c10a357481a998149f12a9174e2701e81dabd8c4c3a01ab84e8d6d579b508562cf267e7cf5730000006b0ab2c',
  '42081d4fea4927c06d4144dd5c07ce239e59e01de3d323fcdd0b4f41679d51bd954707a2b0b1b75cec9b66f8dfbd9d719fc00fc9c595347efc62000006b0ab2c',
@@ -562,7 +563,7 @@ Out[44]:
  '2334243bfb1c8cda6045167c6f50e91e74071eb60fad57e23724860f8b2273ff1e9abb7d5fada1ba8820a149cab49117cb116454a1ffe1c961c8000006b0ab2c',
  '3f38ee382c80049f609c0d1ee4f29e2653460b4b375868b806b2b8cc770ac9121bef73ca983c56c9791b6869ed989f44d626f810e3eb2ea6816b000006b0ab2c',
  '261c3762b3fd0ffd244179a4a58acc39186fa10c175ae1f49881b05c58dc25ad04520f669ecd4b1d56d496922f7239a23d99641c1c9dacbc2841000006b0ab2c',
-
+```
 </details>
 
 - [Go Back](#autogadgetfs-tutorial)
