@@ -372,7 +372,7 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 	In [19]: 
 	```
 
-* Stopping MITM host side:
+* Stopping MITM Raspberry pi side:
 	
 	```bash
 	Keep pressing Ctrl-C anytime to clean up and exit!
