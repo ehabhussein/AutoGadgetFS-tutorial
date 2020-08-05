@@ -412,6 +412,48 @@ root@agfs:/home/pi# python3 router.py -l64 -ip 192.168.1.3
 
 ---
 
+<a name="Control-Transfer-Enumerator"/>
+
+### Device control transfer enumerator
+
+```python3
+In [4]: agfs.devEnumCtrltrnsf()
+In [4]: x.devEnumCtrltrnsf()                                                                                                                                                                  
+**************************************************
+Control Transfer requests enumeration started!
+**************************************************
+**************************
+Now at bmRequest[0xa1]
+**************************
+|-Control transfer found--------------------------------------------------------------------------------
+|	  Request:
+|		Sent: bmRequest=0xa1, bRequest=0x0,wValue=0x0 , wIndex=0x1,data_length=0xff
+|		    |____Received: b'\x00\x84MFG:Cano'...[SNIP]
+|	  Decoded:
+|		 Response: ..MFG.Canon.CMD.BJRaster3.IVEC.MDL.G2010.series.CLS.PRINTER.DES.Canon.G2010.series.VER.1.040.STA.10.PSE.KMFK02913.CID.CA.BJR520.IJP.
+|__________________________________________________________________________________________[*]
+|-Control transfer found--------------------------------------------------------------------------------
+|	  Request:
+|		Sent: bmRequest=0xa1, bRequest=0x0,wValue=0x1 , wIndex=0x1,data_length=0xff
+|		    |____Received: b'\x00\x84MFG:Cano'...[SNIP]
+|	  Decoded:
+|		 Response: ..MFG.Canon.CMD.BJRaster3.IVEC.MDL.G2010.series.CLS.PRINTER.DES.Canon.G2010.series.VER.1.040.STA.10.PSE.KMFK02913.CID.CA.BJR520.IJP.
+|__________________________________________________________________________________________[*]
+|-Control transfer found--------------------------------------------------------------------------------
+|	  Request:
+|		Sent: bmRequest=0xa1, bRequest=0x0,wValue=0x2 , wIndex=0x1,data_length=0xff
+|		    |____Received: b'\x00\x84MFG:Cano'...[SNIP]
+|	  Decoded:
+|		 Response: ..MFG.Canon.CMD.BJRaster3.IVEC.MDL.G2010.series.CLS.PRINTER.DES.Canon.G2010.series.VER.1.040.STA.10.PSE.KMFK02913.CID.CA.BJR520.IJP.
+|__________________________________________________________________________________________[*]
+...SNIP
+```
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Help"/>
+
 ### Help
 
 ### All methods
