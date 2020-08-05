@@ -488,6 +488,7 @@ In [42]: !head -n5 binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bi
 0114fd1a000009200100100000009e01820100b20000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000006b0ab2c
 
 In [43]: x.SmartFuzz(engine="random",samples=100,filename='binariesdb/dfg-Nuvoton-1046-20764-1595061045.257177-device.bin',direction='hst')
+```
 
 <details>
 
@@ -525,6 +526,7 @@ character:6 found:23574 times
 
 </details>
 
+```python3
 ************************
 generated:99 Packets
 ************************
@@ -532,7 +534,8 @@ generated:99 Packets
 Ended Successfully!
 ***********************
 
-In [44]: x.edap.packets                                                                                                                                                                       
+In [44]: x.edap.packets                                                                                                                                          
+```
 
 <details>
 
@@ -560,10 +563,7 @@ Out[44]:
  '3f38ee382c80049f609c0d1ee4f29e2653460b4b375868b806b2b8cc770ac9121bef73ca983c56c9791b6869ed989f44d626f810e3eb2ea6816b000006b0ab2c',
  '261c3762b3fd0ffd244179a4a58acc39186fa10c175ae1f49881b05c58dc25ad04520f669ecd4b1d56d496922f7239a23d99641c1c9dacbc2841000006b0ab2c',
 
-
 </details>
-
-```
 
 - [Go Back](#autogadgetfs-tutorial)
 
