@@ -26,7 +26,7 @@
 		1. [Random fuzzer ✔️](#Host-random-fuzzer)
 		1. [Smart Fuzzer ✔️](#Host-smart-fuzzer)
 		1. [Gadget fuzzer ✔️](#Host-gadget-fuzzer)
-		1. [Send packet to host ❌](#sendhst)
+		1. [Send packet to host ✔️](#sendhst)
 		1. [Fuzzing with code coverage ❌](#codecov)
 1. [Device control transfer enumerator ✔️](#Control-Transfer-Enumerator)
 1. [Monitor device interfaces for changes ✔️](#monint)
@@ -601,6 +601,61 @@ In [12]: agfs.startGadgetFuzzer(vid=50475,pid=1133,serial="AutoGadgetFS",samples
 ```
 
 ![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/GadgetFuzzer.png)
+
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="sendhst"/>
+
+### Send packet to host
+
+```python3
+
+In [52]: agfs.help("startQueuewrite")                                                                                                                                                            
+****
+[+]Help for startQueuewrite Method:
+[-]Signature: startQueuewrite(self)
+
+
+[+]startQueuewrite Help:
+initiates a connection to the queue to communicate with the host
+****
+
+In [53]: agfs.help("hostwrite")                                                                                                                                                                  
+****
+[+]Help for hostwrite Method:
+[-]Signature: hostwrite(self, payload, isfuzz=0)
+
+
+[+]hostwrite Help:
+This method writes packets to the host either targeting a software or a driver in control of the device
+use this when you want to send payloads to a device driver on the host.
+
+:param payload: the message to be sent to the host example: "0102AAFFCC"
+:param isfuzz: is the payload coming from the fuzzer ?
+
+****
+
+In [54]: agfs.help("stopQueuewrite")                                                                                                                                                             
+****
+[+]Help for stopQueuewrite Method:
+[-]Signature: stopQueuewrite(self)
+
+
+[+]stopQueuewrite Help:
+stop the thread incharge of communicating with the host machine
+****
+
+
+In [55]: x.startQueuewrite()                                                                                                                                                                  
+In [56]: x.hostwrite("AAAA")                                                                                                                                                          
+In [56]: x.hostwrite("BBBB")  
+
+In [57]: x.stopQueuewrite()  
+
+```
 
 
 - [Go Back](#autogadgetfs-tutorial)
