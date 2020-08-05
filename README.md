@@ -22,16 +22,16 @@
 		1. [Smart Fuzzer ❌](#Device-smart-fuzz)
 		1. [Describe fuzzer ✔️](#Describe-fuzzer)
 		1. [Send packet to device ❌](#senddev)
-	- [Fuzzing the host](#Hostfuzz)
+	- [Fuzzing the host ✔️](#Hostfuzz)
 		1. [Random fuzzer ❌](#Host-random-fuzzer)
 		1. [Smart Fuzzer ❌](#Host-smart-fuzzer)
-		1. [Gadget fuzzer ❌](#Host-gadget-fuzzer)
+		1. [Gadget fuzzer ✔️](#Host-gadget-fuzzer)
 		1. [Send packet to host ❌](#sendhst)
 		1. [Fuzzing with code coverage ❌](#codecov)
 1. [Device control transfer enumerator ✔️](#Control-Transfer-Enumerator)
 1. [Monitor device interfaces for changes ✔️](#monint)
 1. [Clearing rabbitMQ Queues✔️](#qclear)
-1. [Releasing the device back to the system✔️](#release)
+1. [Releasing the device back to the system ✔️](#release)
 1. [Parse, search , show and replay usblyzer capture ❌](#usblyzer)
 1. [Reset the device ✔️](#reset)
 1. [Show device information](#devinfo)
@@ -415,6 +415,47 @@ In [6]: agfs.removeGadget()
   In [19:] agfs.describeFuzz(epin=0x81,epout=0x2,packet="f3e01ec..SNIP..259d293d",howmany=10)
   ```
   ![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/describefuzz.png)
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+<a name="Hostfuzz"/>
+
+###Fuzzing the host
+
+<a name="Host-gadget-fuzzer"/>
+
+### Gadget fuzzer
+
+```python3
+
+In [11] agfs.help("startGadgetFuzzer")                                                                                                                                                          
+****
+[+]Help for startGadgetFuzzer Method:
+[-]Signature: startGadgetFuzzer(self, vid=None, pid=None, dclass=None, serial='AutoGadgetFS', manufacturer=None, product=None, samples=100, min=0, max=10)
+
+
+[+]startGadgetFuzzer Help:
+This method creates random gadgets to run on the Pi
+:param vid: vendor ID
+:param pid: product ID
+:param dclass: device class
+:param serial: serial number
+:param manufacturer: manufacturer name
+:param product: product name
+:param samples: number of gadgets to create and run
+:param min: minimum bytes to add to the HID report
+:param max: maximum bytes to add to the HID report
+:return: None
+****
+
+In [12]: agfs.startGadgetFuzzer(vid=50475,pid=1133,serial="AutoGadgetFS",samples=20) 
+
+```
+
+![](https://github.com/ehabhussein/AutoGadgetFS-tutorial/raw/master/agfstutscreens/GadgetFuzzer.png)
+
 
 - [Go Back](#autogadgetfs-tutorial)
 
