@@ -509,6 +509,7 @@ Now at bmRequest[0xa1]
 |__________________________________________________________________________________________[*]
 ...SNIP
 ```
+
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
@@ -599,7 +600,6 @@ In [9]: agfs.device.reset()
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
-
 
 <a name="Help"/>
 
@@ -712,7 +712,6 @@ ________________________________________________________________________________
 - [Go Back](#autogadgetfs-tutorial)
 
 ---
-
 
 ### Help for a method
 
