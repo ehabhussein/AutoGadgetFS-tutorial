@@ -649,11 +649,11 @@ stop the thread incharge of communicating with the host machine
 ****
 
 
-In [55]: x.startQueuewrite()                                                                                                                                                                  
-In [56]: x.hostwrite("AAAA")                                                                                                                                                          
-In [56]: x.hostwrite("BBBB")  
+In [55]: agfs.startQueuewrite()                                                                                                                                                                  
+In [56]: agfs.hostwrite("AAAA")                                                                                                                                                          
+In [56]: agfs.hostwrite("BBBB")  
 
-In [57]: x.stopQueuewrite()  
+In [57]: agfs.stopQueuewrite()  
 
 ```
 
