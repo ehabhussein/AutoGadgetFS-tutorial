@@ -428,7 +428,7 @@ In [6]: agfs.removeGadget()
 
 <a name="Host-random-fuzzer"/>
 
-### Host random fuzzer
+  * Host Random fuzzer:
 
 ```python3
 
@@ -459,7 +459,7 @@ In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0)
 
 <a name="Host-smart-fuzzer"/>
 
-### Host Smart Fuzzer
+  * Host Smart fuzzer:
 
 * After you have done a MITM between the device and the host, the communication has been saved in the `binariesdb/` folder you can use either the host or device communication to generate packets.
 
@@ -541,6 +541,7 @@ In [44]: agfs.edap.packets
 ```
 
 <details>
+	
 ```python3
 Out[44]: 
 ['3a3cd3f2100661b9bff40f436464db4b1a9d003c10a357481a998149f12a9174e2701e81dabd8c4c3a01ab84e8d6d579b508562cf267e7cf5730000006b0ab2c',
@@ -574,7 +575,7 @@ Out[44]:
 
 <a name="Host-gadget-fuzzer"/>
 
-### Gadget fuzzer
+  * Host Gadget fuzzer:
 
 ```python3
 
@@ -611,7 +612,7 @@ In [12]: agfs.startGadgetFuzzer(vid=50475,pid=1133,serial="AutoGadgetFS",samples
 
 <a name="sendhst"/>
 
-### Send packet to host
+  * Send Packet to host:
 
 ```python3
 
