@@ -1,6 +1,6 @@
 ![](https://github.com/ehabhussein/AutoGadgetFS/raw/master/screenshots/agfslogos.png)
 
-<iframe width="1268" height="713" src="https://www.youtube.com/embed/VY10xFifA50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/VY10xFifA50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [![PayPal Donations](https://img.shields.io/static/v1?logo=Donate&label=Donate&message=To%20support%20the%20development%20of%20AGFS&color=blue)](https://www.paypal.me/autogadgetfs)
 
@@ -10,7 +10,7 @@
 1. [What is AutoGadgetFS ✔️](https://agfs.io/){:target="_blank"}
 1. [Learn about USB ✔️](https://www.beyondlogic.org/usbnutshell/usb1.shtml){:target="_blank"}
 1. [How to install Autogadgetfs ✔️](https://agfs.io/#Installation){:target="_blank"}
-1. [AutoGadgetFS settings file ✔️](#agfssettings)https://github.com/aktsk/apk-medit
+1. [AutoGadgetFS settings file ✔️](#agfssettings)
 1. [Importing agfs and selecting your device(Configuration, Interface, Alternate Settings, Endpoints)✔️](#selecting-your-device)
 1. [Create a new project ✔️](#newp)
 1. [Emulating the selected device ✔️](#Emulating-the-selected-device)
