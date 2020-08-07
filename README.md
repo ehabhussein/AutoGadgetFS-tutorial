@@ -36,7 +36,7 @@
 1. [Releasing the device back to the system ✔️](#release)
 1. [Parse, search , show and replay usblyzer capture ❌](#usblyzer)
 1. [Reset the device ✔️](#reset)
-1. [Show device information](#devinfo)
+1. [Show device Interfaces information ✔️](#devinfo)
 1. [Help ✔️](#Help)
 	- [Summary of methods ✔️](#All-methods)
 	- [Help for a method ✔️](#Method-help)
@@ -800,6 +800,37 @@ Releasing interface: 2
 In [9]: agfs.device.reset()
 
 ```
+
+- [Go Back](#autogadgetfs-tutorial)
+
+---
+
+### Show device Interfaces information
+
+<a name="devinfo"/>
+
+  ```python3
+  In [6]: agfs.help("deviceInterfaces")                                                                                                                                                          
+****
+[+]Help for deviceInterfaces Method:
+[-]Signature: deviceInterfaces(self)
+
+
+[+]deviceInterfaces Help:                                                                                                                                                                   
+get all interfaces and endpoints on the device
+****
+
+In [7]: agfs.deviceInterfaces()                                                                                                                                                                
+Configuration 1
+    INTERFACE 0: Human Interface Device 
+      ENDPOINT 0x85: Interrupt IN 
+    INTERFACE 1: Human Interface Device 
+      ENDPOINT 0x81: Interrupt IN 
+      ENDPOINT 0x2: Interrupt OUT 
+    INTERFACE 2: Human Interface Device 
+      ENDPOINT 0x83: Interrupt IN 
+      ENDPOINT 0x4: Interrupt OUT 
+  ```
 
 - [Go Back](#autogadgetfs-tutorial)
 
