@@ -29,7 +29,6 @@
 		1. [Smart Fuzzer ✔️](#Host-smart-fuzzer)
 		1. [Gadget fuzzer ✔️](#Host-gadget-fuzzer)
 		1. [Send packet to host ✔️](#sendhst)
-		1. [Fuzzing with code coverage ❌](#codecov)
 1. [Device control transfer enumerator ✔️](#Control-Transfer-Enumerator)
 1. [Monitor device interfaces for changes ✔️](#monint)
 1. [Clearing rabbitMQ Queues✔️](#qclear)
