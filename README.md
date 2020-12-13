@@ -21,7 +21,7 @@
 1. [Fuzzing device and host](#Fuzzing)
 	- [Fuzzing the device](#Devfuzz)
 		1. [Random fuzzer ✔️](#Device-random-fuzzer)
-		1. [Smart Fuzzer ❌](#Device-smart-fuzz)
+		1. [Smart Fuzzer ✔️](#Host-smart-fuzzer)
 		1. [Describe fuzzer ✔️](#Describe-fuzzer)
 		1. [Send packet to device ❌](#senddev)
 	- [Fuzzing the host ✔️](#Hostfuzz)
@@ -245,7 +245,7 @@ In [4]:
 ### Create a new project
 
 ```python
-In [20]: agfs.newProject()                                                                                                                                                                       
+In [20]: agfs.newProject()                                                                                                                                                                        
 [-] Releasing the Interface
 Releasing interfaces :
 1
