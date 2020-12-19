@@ -458,7 +458,7 @@ In [13]: agfs.hstrandfuzz(howmany=100,size=64,timeout=0)
 
 <a name="Host-smart-fuzzer"/>
 
-  * Host Smart fuzzer:
+  * Host or Device Smart fuzzer:
 
 * After you have done a MITM between the device and the host, the communication has been saved in the `binariesdb/` folder you can use either the host or device communication to generate packets.
 
